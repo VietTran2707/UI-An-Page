@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+@mixin flex($justifyContent: center, $alignItem: center){
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+}
+
+@mixin tablet {
+    @media only screen and (max-width: $tablet-width) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-width: $mobile-width) {
+        @content
+    }
+}
