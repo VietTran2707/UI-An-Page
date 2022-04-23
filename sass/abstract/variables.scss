@@ -6,16 +6,18 @@ $skinColor: #FFF1DC;
 $SecondText: #A1B4DE;
 
 $backgroundColor: $lightgray;
+$backgroundColorSecond: #F6FAFF;
 
-
-$fontSizeNormal: 1.125rem;
-$fontSizeMedium: 1.25rem;
-$fontSizeLarge: 1.5625rem;
+$fontSizeXs: 0.75rem;
+$fontSizeSm: 1rem;
+$fontSizeLg: 1.15rem;
+$fontSizeXl: 1.5625rem;
 
 $sideBarWidth: 362px;
-$spacing: 62px;
+$sideBarWidthTablet: 300px;
+$spacing: 1.5rem;
 $mobileSpacing: 40px;
-$tablet-width: 1024px;
+$tablet-width: 1400px;
 $mobile-width: 600px;
 
 $borderRadius: 20px;

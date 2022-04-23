@@ -1,0 +1,169 @@
+@import '../../sass/abstract/variables.scss';
+@import '../../sass/abstract/mixin.scss';
+
+
+.dashboard {
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 20px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 20px;
+        max-height: 20%; 
+        height: 20%;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 20px;
+
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
+    ::-webkit-scrollbar-button {
+        min-height: 150px;
+    }
+    display: flex;
+    background-color: $backgroundColor;
+    height: 100vh;
+
+    &Sidebar {
+        flex-direction: column;
+        text-align: center;
+        width: $sideBarWidth;
+        background-color: $white;
+        padding: 20px 48px;
+        color: $SecondText;
+        font-weight: 600;
+        font-size: $fontSizeXl;
+        height: 100vh;
+
+        @include tablet {
+            font-size: $fontSizeLg;
+            width: $sideBarWidthTablet;
+        }
+        .logo {
+            width: 100%;
+        }
+
+        .menu {
+            .sidebarItem {
+                @include flex();
+                margin-top: $spacing;
+                padding: 0.5rem;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: color 0.3s linear;
+                
+                img {
+                    @include w_H(1.5rem);
+                    margin-right: 23px;
+                }
+                &.active {
+                    background-color: $backgroundColorSecond;
+                    color: $blue;
+                }
+            }
+        }
+
+        .draft {
+            padding: 25px 42px;
+            background-color: $backgroundColorSecond;
+            border-radius: $borderRadius;
+            color: black;
+            margin-top: $spacing;
+            
+            @include tablet {
+                margin-top: $mobileSpacing;
+            }
+            img {
+                @include w_H(4rem);
+            }
+
+            button {
+                cursor: pointer;
+                margin-top: 0.5rem;
+                border: none;
+                background-color: $white;
+                font-size: $fontSizeXl;
+                font-weight: 500;
+                padding: 0.5rem 1rem;
+                border-radius: $borderRadiusButton;
+                @include tablet {
+                    font-size: $fontSizeSm;
+                }
+            }
+        }
+    }
+
+    .dashboardRight {
+        flex: 1;
+        margin: 3rem;
+        margin-top: 1rem;
+
+        .navbar {
+            @include flex($justifyContent: space-between);
+            .input {
+                position: relative;
+                flex: 0.7;
+
+                input {
+                    border: none;
+                    outline: none;
+                    padding: 0.75rem 2.5rem;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: $borderRadius;
+                    font-size: $fontSizeLg;
+
+                    &::placeholder {
+                        font-size: $fontSizeLg;
+                    }
+                }
+                img {
+                    position: absolute;
+                    left: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @include w_H(1.2rem)
+                }
+            }
+            .wrapper {
+                flex: 0.3;
+                @include flex($justifyContent: flex-end);
+                .notification {
+                    border: none;
+                    @include w_H(2rem);
+                    background-color: $white;
+                    border-radius: $borderRadiusButton;
+                    img {
+                        @include w_H(50%)
+                    }
+                }
+
+                .admin {
+                    margin-left: 2rem;
+                    @include flex();
+                    .avatar {
+                        // @include w_H(2rem);
+                        margin-right: 1rem;
+                        border-radius: 50%;
+                        overflow: hidden;
+
+                        img {
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

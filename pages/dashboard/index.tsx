@@ -1,10 +1,16 @@
 import React from 'react'
-import DashboardLayout from '../../components/Dashboard/DashboardLayout'
+import type { ReactElement } from 'react'
+import DashboardLayout from '../../components/DashboardLayout/DashboardLayout'
 
 const Dashboard = () => {
   return (
-    <DashboardLayout></DashboardLayout>
+    <div></div>
   )
 }
 
+Dashboard.getLayout = function getLayout(page: ReactElement) {
+  return (
+      <DashboardLayout>{page}</DashboardLayout>
+  )
+}
 export default Dashboard

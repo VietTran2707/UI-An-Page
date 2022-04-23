@@ -6,6 +6,11 @@
     align-items: $alignItem;
 }
 
+@mixin w_H($width) {
+    width: $width;
+    height: $width;
+}
+
 @mixin tablet {
     @media only screen and (max-width: $tablet-width) {
         @content
