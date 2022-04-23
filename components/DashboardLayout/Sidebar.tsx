@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import styles from './dashboardlayout.module.scss'
-import logo from '../../assets/image/dashboard/logo.png'
+import logo from '../../assets/image/dashboard/logo.svg'
 import dashboardIcon from '../../assets/image/dashboard/icon.png'
 import frameIcon from '../../assets/image/dashboard/frame.png'
 import Link from 'next/link'
