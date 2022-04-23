@@ -19,12 +19,12 @@ const Navbar = () => {
     return (
         <div className={styles.navbar}>
             <div ref={inputRef} className={styles.input}>
-                <input placeholder='search for statistics'/>
+                <input type='text' placeholder='search for statistics'/>
                 <img src={searchIcon.src} />
             </div>
             <div className={styles.wrapper}>
                 <button 
-                    className={styles.notification}
+                    className={`${styles.notification} ${styles.active}`}
                     style = {{
                     width: height,
                     height: height
